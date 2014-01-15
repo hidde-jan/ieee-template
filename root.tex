@@ -1,0 +1,193 @@
+%% IEEE template
+%%
+%%   A simple, one file template for writing papers for IEEE, based on
+%%   the work done by Michael Shell.
+%%
+%% Version:
+%%   v0.0
+%%
+%% Authors:
+%%   Hidde-Jan Jongsma
+%%   Michael Shell
+
+
+% The default document class. Uses a4paper for European users.
+\documentclass[final, a4paper]{IEEEtran}
+
+% When working on a technical note, use the following settings.
+%\documentclass[final, a4paper, technote]{IEEEtran}
+
+% For drafts, the following documentclass is recommended.
+%\documentclass[draftclass, a4paper, 10pt, onecolumn]{IEEEtran}
+
+
+% *** REFERENCE PACKAGES ***
+%
+\usepackage{cite}
+\usepackage{url}
+
+% The hyperref package creates links between references in the paper.
+% You should probably disable it before submitting the paper.
+\usepackage{hyperref}
+
+
+% *** GRAPHICS PACKAGES ***
+%
+\usepackage[pdftex]{graphicx}
+
+% Uncomment the following line to use tikz.
+%\usepackage{tikz}
+
+% Images can be placed in the subdirectory ./img.
+\graphicspath{{./img/}}
+
+% The following extensions can be omitted.
+\DeclareGraphicsExtensions{.pdf,.jpeg,.jpg,.png}
+
+% If you need to use color, uncomment the next line.
+%\usepackage[usenames]{xcolor}
+
+% To automatically convert eps files to pdf files, uncomment the
+% following line:
+%\usepackage{epstopdf}
+
+
+% *** MATH PACKAGES ***
+%
+\usepackage[cmex10]{amsmath}  % Prevents bit-mapped fonts.
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{array}
+
+% Uncomment the following line to allow page breaks in equations.
+%\interdisplaylinepenalty=2500
+
+% Correct bad hyphenation here
+\hyphenation{op-tical net-works semi-conduc-tor}
+
+
+\begin{document}
+
+% *** AUTHOR/TITLE SETUP ***
+%
+% Set the title for the paper.
+\title{Paper title}
+
+% Authors of the paper. Do not put any extra spaces between the
+% brackets, which includes newlines.
+\author{A.~Uthor,
+        S.E.~Condauthor,~\IEEEmembership{Member,~IEEE,}
+        and A.N.~Otherauthor,~\IEEEmembership{Member,~IEEE}% <-this % stops a space
+\thanks{All authors are stupid.}% <-this % stops a space
+}
+
+% The paper headers. Set these for peerreview stuff.
+\ifCLASSOPTIONpeerreview
+\markboth{IEEE Transactions on Automatic Control}%
+{Paper title}
+\else
+\markboth{IEEE Transactions on Automatic Control}%
+{Uthor \MakeLowercase{\textit{et al.}}: Paper title}
+\fi
+
+% If you want to put a publisher's ID mark on the page you can do it like
+% this:
+%\IEEEpubid{0000--0000/00\$00.00~\copyright~2012 IEEE}
+% Remember, if you use this you must call \IEEEpubidadjcol in the second
+% column for its text to clear the IEEEpubid mark.
+
+% For special paper notices, uncomment the following line.
+%\IEEEspecialpapernotice{(Invited Paper)}
+
+
+% Render the title.
+\maketitle
+
+
+% *** ABSTRACT & KEYWORDS ***
+%
+% As a general rule, do not put math, special symbols or citations
+% in the abstract or keywords.
+\begin{abstract}
+  Short abstract here.
+\end{abstract}
+
+% Note that keywords are not normally used for peerreview papers.
+\begin{IEEEkeywords}
+just,
+put,
+a few,
+here.
+\end{IEEEkeywords}
+
+% For peer review papers, you can put extra information on the cover
+% page as needed:
+% \ifCLASSOPTIONpeerreview
+% \begin{center} \bfseries EDICS Category: 3-BBND \end{center}
+% \fi
+%
+% For peerreview papers, this IEEEtran command inserts a page break and
+% creates the second title. It will be ignored for other modes.
+\IEEEpeerreviewmaketitle
+
+
+% *** MAIN CONTENT ***
+%
+\section{Introduction}
+% For a full paper, use a IEEEPARstart:
+%\IEEEPARstart{T}{his} is the first sentence of the introduction. A
+%second sentence will soon follow the first one. Another sentence is
+%right out.
+%
+% For a technote, just start normally.
+Here is some text which is part of the introduction, see
+\cite{ma10,mesbahi10}.
+
+
+\subsection{Subsection Heading Here}
+Subsection text here.
+
+
+% needed in second column of first page if using \IEEEpubid
+%\IEEEpubidadjcol
+
+
+% *** APPENDICES ***
+%
+% If appendices are needed, uncomment the following line and continue
+% normally.
+%\appendices
+
+
+% *** ACKNOWLEDGEMENT ***
+%
+% Use an unmarked section* for acknowledgement.
+%\section*{Acknowledgment}
+
+
+% *** BIBLIOGRAPHY ***
+%
+% You can trigger a \newpage just before the given reference number,
+% used to balance the columns on the last page adjust value as needed,
+% may need to be readjusted if the document is modified later.
+%\IEEEtriggeratref{8}
+% The "triggered" command can be changed if desired:
+%\IEEEtriggercmd{\enlargethispage{-5in}}
+\bibliographystyle{IEEEtran}
+% argument is your BibTeX string definitions and bibliography database(s)
+\bibliography{./IEEEabrv,./db}
+
+
+% *** BIOGRAPHY ***
+%
+% If you have an EPS/PDF photo (graphicx package needed) extra braces are
+% needed around the contents of the optional argument to biography to prevent
+% the LaTeX parser from getting confused when it sees the complicated
+% \includegraphics command within an optional argument. (You could create
+% your own custom macro containing the \includegraphics command to make things
+% simpler here.)
+%\begin{IEEEbiography}[{\includegraphics[width=1in,height=1.25in,clip,keepaspectratio]{mshell}}]{Michael Shell}
+
+
+\end{document}
+
